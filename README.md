@@ -21,23 +21,23 @@ Execute Django admin and create details for 10 books
 ```
 from django.db import models
 from django.contrib import admin
-class Movie(models.Model):
-    mid=models.IntegerField()
-    mname=models.CharField(max_length=100)
+class car(models.Model):
+    model=models.IntegerField()
+    cname=models.CharField(max_length=100)
     collection=models.IntegerField()
     year=models.IntegerField()
     rating=models.FloatField()
 
-class MovieAdmin(admin.ModelAdmin):
-    list_display=('mid','mname','collection','year','rating')
+class carAdmin(admin.ModelAdmin):
+    list_display=('model','cname','collection','year','rating')
 
 
 admin.py
 =========
 
 from django.contrib import admin
-from .models import Movie,MovieAdmin
-admin.site.register(Movie,MovieAdmin)
+from .models import car,carAdmin
+admin.site.register(car,carAdmin)
 ```
 # OUTPUT
 ![alt text](<Screenshot 2025-09-21 102150.png>)
